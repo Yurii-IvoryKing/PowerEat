@@ -170,18 +170,6 @@ textarea.input {
   justify-content: space-between;
   flex-direction: row-reverse;
 }
-.select__value:before {
-  content: "";
-  align-self: stretch;
-  flex: 0 0 10px;
-  transition: all 0.3s ease 0s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-._select-open .select__value:before {
-  transform: rotate(-180deg);
-}
 .select__text {
   flex: 1 1 auto;
 }
@@ -1838,14 +1826,14 @@ body.popup-show::after {
 }
 .select-total .select__value {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   height: 1.25rem;
 }
-.select-total .select__value:before {
+.select-total .select__value:after {
   content: "";
   align-self: stretch;
   flex: 0 0 10px;
@@ -1857,7 +1845,7 @@ body.popup-show::after {
   background-repeat: no-repeat;
   background-position: center;
 }
-._select-open .select-total .select__value:before {
+._select-open .select-total .select__value:after {
   transform: rotate(-180deg);
 }
 .select-total .select__content {
@@ -1918,6 +1906,7 @@ body.popup-show::after {
 }
 .select-total .select__asset {
   display: flex;
+  gap: 1.25rem;
   width: 100%;
 }
 .select-total .select__asset span {

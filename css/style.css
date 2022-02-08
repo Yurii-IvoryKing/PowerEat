@@ -157,9 +157,6 @@ textarea.input {
   padding: 0px 0px;
 }
 
-.select {
-  position: relative;
-}
 .select__title {
   cursor: pointer;
   width: 100%;
@@ -194,7 +191,6 @@ textarea.input {
   display: block;
   text-align: left;
   cursor: pointer;
-  padding: 0.625rem 15px;
   color: inherit;
 }
 .select__option._select-selected {
@@ -203,11 +199,6 @@ textarea.input {
 @media (any-hover: hover) {
   .select__option:hover {
     background: #d9d9d9;
-  }
-}
-@media (max-width: 47.99875em) {
-  .select__option {
-    padding: 0.625rem 0.9375rem;
   }
 }
 .select__row {
@@ -364,6 +355,9 @@ body.popup-show::after {
 }
 .popup__close:hover {
   opacity: 0.7;
+}
+.popup .select {
+  position: relative;
 }
 .popup .select__title {
   display: flex;
@@ -1393,6 +1387,10 @@ body.popup-show::after {
   border-radius: 0.625rem;
   overflow: hidden;
 }
+.category-select__input:checked + label {
+  background: #f58704;
+  color: #fff;
+}
 .category-select__item {
   position: relative;
   display: flex;
@@ -1458,7 +1456,7 @@ body.popup-show::after {
   padding: 0rem 3.75rem 4.375rem 3.75rem;
   margin-top: 2.3125rem;
 }
-@media (max-width: 61.99875em) {
+@media (max-width: 62.49875em) {
   .foodcalc__content {
     padding: 0rem 1.875rem 4.375rem 1.875rem;
     flex-direction: column;
@@ -1478,6 +1476,21 @@ body.popup-show::after {
   border-top-right-radius: 0.625rem;
   border-top-left-radius: 0.625rem;
 }
+@media (max-width: 61.99875em) {
+  .tabs-foodcalc__navigation {
+    scrollbar-width: thin;
+    scrollbar-color: #dfdfdf #a9a9a9;
+  }
+  .tabs-foodcalc__navigation::-webkit-scrollbar {
+    width: 0.75rem;
+  }
+  .tabs-foodcalc__navigation::-webkit-scrollbar-track {
+    background: #dfdfdf;
+  }
+  .tabs-foodcalc__navigation::-webkit-scrollbar-thumb {
+    background-color: #a9a9a9;
+  }
+}
 .tabs-foodcalc__mobile {
   display: flex;
   gap: 1.25rem;
@@ -1487,7 +1500,7 @@ body.popup-show::after {
 .tabs-foodcalc__mobile > * {
   flex: 1 1 100%;
 }
-@media (min-width: 61.99875em) {
+@media (min-width: 62.49875em) {
   .tabs-foodcalc__mobile {
     display: none;
   }
@@ -1511,14 +1524,16 @@ body.popup-show::after {
   font-weight: 700;
 }
 .tabs-foodcalc__tab:hover {
-  background-color: #ebebeb;
+  background-color: #f58704;
+  color: #fff;
 }
 .tabs-foodcalc__tab._tab-disabled {
   color: #fff;
   background-color: #f58704;
 }
 .tabs-foodcalc__tab._tab-disabled:hover {
-  background: rgba(245, 135, 4, 0.5);
+  background: #f58704;
+  color: #fff;
 }
 .tabs-foodcalc__tab._tab-active {
   color: #000;
@@ -1580,38 +1595,8 @@ body.popup-show::after {
   }
 }
 
-.schedule-foodcalc__filter {
-  display: flex;
-  border-radius: 1.875rem;
-  background: #ffffff;
-  box-shadow: 0px 0.25rem 1.25rem rgba(201, 201, 201, 0.3);
-}
-@media (max-width: 61.99875em) {
-  .schedule-foodcalc__filter {
-    margin: 2.1875rem 1.25rem 0 1.25rem;
-  }
-}
-.schedule-foodcalc__btn {
-  display: block;
+.schedule-foodcalc {
   flex: 1 1 100%;
-  padding: 0.5rem 0.5rem 0.4375rem 0.5rem;
-  font-size: 0.75rem;
-  line-height: 1.25rem;
-  text-align: center;
-  border-radius: 1.875rem;
-  background: #fff;
-  color: #000;
-  transition: 0.2s ease;
-}
-.schedule-foodcalc__btn._filter-active {
-  background: #f58704;
-  color: #fff;
-}
-.schedule-foodcalc__btn:hover {
-  background: #f2f2f2;
-}
-.schedule-foodcalc__btn:hover._filter-active {
-  background: rgba(245, 135, 4, 0.6);
 }
 .schedule-foodcalc__content {
   display: flex;
@@ -1624,7 +1609,9 @@ body.popup-show::after {
   }
 }
 .schedule-foodcalc__items {
+  flex: 1 1 100%;
   display: flex;
+  align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
   column-gap: 1.25rem;
@@ -1637,6 +1624,41 @@ body.popup-show::after {
     row-gap: 0;
     padding-bottom: 2.1875rem;
   }
+}
+.options-filter {
+  display: flex;
+  border-radius: 1.875rem;
+  background: #ffffff;
+  box-shadow: 0px 0.25rem 1.25rem rgba(201, 201, 201, 0.3);
+}
+@media (max-width: 62.49875em) {
+  .options-filter {
+    margin: 2.1875rem 1.25rem 0 1.25rem;
+  }
+}
+.options-filter__item {
+  flex: 1 1 100%;
+}
+.options-filter__input:checked + label {
+  background: #f58704;
+  color: #fff;
+}
+.options-filter__label {
+  display: block;
+  padding: 0.5rem 0.5rem 0.4375rem 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  text-align: center;
+  border-radius: 1.875rem;
+  background: #fff;
+  color: #000;
+  transition: 0.2s ease;
+}
+.options-filter__label:hover {
+  background: #f2f2f2;
+}
+.options-filter__label:hover._filter-active {
+  background: rgba(245, 135, 4, 0.6);
 }
 .item-schedule {
   flex: 0 0 auto;
@@ -1754,7 +1776,7 @@ body.popup-show::after {
 .total-foodcalc__type {
   margin-top: 0.9375rem;
 }
-@media (max-width: 61.99875em) {
+@media (max-width: 62.49875em) {
   .total-foodcalc__type {
     margin-top: 0;
   }
@@ -1815,6 +1837,10 @@ body.popup-show::after {
   background: #27944f;
 }
 
+.select-total {
+  position: relative;
+  z-index: 10;
+}
 .select-total .select__title {
   display: flex;
   color: inherit;
@@ -1854,6 +1880,7 @@ body.popup-show::after {
 }
 .select-total .select__text {
   flex: 1 1 auto;
+  display: none;
 }
 .select-total .select__input {
   width: 100%;
@@ -1863,7 +1890,7 @@ body.popup-show::after {
 .select-total .select__options {
   color: #000;
   position: absolute;
-  top: 29px;
+  top: 1.875rem;
   border-radius: 0 0 4px 4px;
   min-width: 100%;
   left: 0;
@@ -1872,6 +1899,7 @@ body.popup-show::after {
   border: none;
   border-top: 0;
   padding-top: 0.4375rem;
+  padding-right: 0;
 }
 .select-total .select__scroll {
   overflow-y: auto;
@@ -1883,7 +1911,7 @@ body.popup-show::after {
   display: block;
   text-align: left;
   cursor: pointer;
-  padding: 0.625rem 0.3125rem;
+  padding: 0.625rem 1.875rem 0.625rem 1.25rem;
   color: inherit;
 }
 .select-total .select__option._select-selected {
@@ -1892,11 +1920,6 @@ body.popup-show::after {
 @media (any-hover: hover) {
   .select-total .select__option:hover {
     background: #d9d9d9;
-  }
-}
-@media (max-width: 47.99875em) {
-  .select-total .select__option {
-    padding: 0.625rem 0.9375rem;
   }
 }
 .select-total .select__row {
@@ -1908,32 +1931,29 @@ body.popup-show::after {
   display: flex;
   gap: 1.25rem;
   width: 100%;
+  margin-right: 0.5625rem;
 }
 .select-total .select__asset span {
-  display: block;
+  display: flex;
   font-size: 0.75rem;
   line-height: 1.25rem;
   color: #000000;
   white-space: nowrap;
 }
+.select-total .select__asset span span {
+  margin-right: 0.5ch;
+  font-weight: 400 !important;
+}
 .select-total .select__asset span:first-child {
   font-weight: 600;
   flex: 1 1 auto;
 }
-.select-total .select__asset span:last-child {
-  margin-right: 0.5625rem;
-}
-.select-total .select._select-open {
-  z-index: 5;
-}
-
 .delivery {
   margin-top: 6.3125rem;
 }
 .delivery__container {
   display: flex;
   flex-direction: column;
-  padding-left: 2rem;
 }
 .delivery__info {
   display: flex;
@@ -1950,6 +1970,7 @@ body.popup-show::after {
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem;
+  padding-left: 0.75rem;
   flex: 1 1 auto;
 }
 .delivery__info-image img {
@@ -3073,220 +3094,6 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: hidden;
-}
-[data-simplebar] {
-  position: relative;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-  align-items: flex-start;
-}
-
-.simplebar-wrapper {
-  overflow: hidden;
-  width: inherit;
-  height: inherit;
-  max-width: inherit;
-  max-height: inherit;
-}
-
-.simplebar-mask {
-  direction: inherit;
-  position: absolute;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: auto !important;
-  height: auto !important;
-  z-index: 0;
-}
-
-.simplebar-offset {
-  direction: inherit !important;
-  box-sizing: inherit !important;
-  resize: none !important;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 0;
-  margin: 0;
-  -webkit-overflow-scrolling: touch;
-}
-
-.simplebar-content-wrapper {
-  direction: inherit;
-  box-sizing: border-box !important;
-  position: relative;
-  display: block;
-  height: 100%;
-  /* Required for horizontal native scrollbar to not appear if parent is taller than natural height */
-  width: auto;
-  max-width: 100%;
-  /* Not required for horizontal scroll to trigger */
-  max-height: 100%;
-  /* Needed for vertical scroll to trigger */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.simplebar-content-wrapper::-webkit-scrollbar,
-.simplebar-hide-scrollbar::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-
-.simplebar-content:before,
-.simplebar-content:after {
-  content: " ";
-  display: table;
-}
-
-.simplebar-placeholder {
-  max-height: 100%;
-  max-width: 100%;
-  width: 100%;
-  pointer-events: none;
-}
-
-.simplebar-height-auto-observer-wrapper {
-  box-sizing: inherit !important;
-  height: 100%;
-  width: 100%;
-  max-width: 1px;
-  position: relative;
-  float: left;
-  max-height: 1px;
-  overflow: hidden;
-  z-index: -1;
-  padding: 0;
-  margin: 0;
-  pointer-events: none;
-  flex-grow: inherit;
-  flex-shrink: 0;
-  flex-basis: 0;
-}
-
-.simplebar-height-auto-observer {
-  box-sizing: inherit;
-  display: block;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 1000%;
-  width: 1000%;
-  min-height: 1px;
-  min-width: 1px;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.simplebar-track {
-  z-index: 1;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-[data-simplebar].simplebar-dragging .simplebar-content {
-  pointer-events: none;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-[data-simplebar].simplebar-dragging .simplebar-track {
-  pointer-events: all;
-}
-
-.simplebar-scrollbar {
-  position: absolute;
-  left: 0;
-  right: 0;
-  min-height: 10px;
-}
-
-.simplebar-scrollbar:before {
-  position: absolute;
-  content: "";
-  background: black;
-  border-radius: 7px;
-  left: 2px;
-  right: 2px;
-  opacity: 0;
-  transition: opacity 0.2s linear;
-}
-
-.simplebar-scrollbar.simplebar-visible:before {
-  /* When hovered, remove all transitions from drag handle */
-  opacity: 0.5;
-  transition: opacity 0s linear;
-}
-
-.simplebar-track.simplebar-vertical {
-  top: 0;
-  width: 11px;
-}
-
-.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
-  top: 2px;
-  bottom: 2px;
-}
-
-.simplebar-track.simplebar-horizontal {
-  left: 0;
-  height: 11px;
-}
-
-.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
-  height: 100%;
-  left: 2px;
-  right: 2px;
-}
-
-.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
-  right: auto;
-  left: 0;
-  top: 2px;
-  height: 7px;
-  min-height: 0;
-  min-width: 10px;
-  width: auto;
-}
-
-/* Rtl support */
-[data-simplebar-direction=rtl] .simplebar-track.simplebar-vertical {
-  right: auto;
-  left: 0;
-}
-
-.hs-dummy-scrollbar-size {
-  direction: rtl;
-  position: fixed;
-  opacity: 0;
-  visibility: hidden;
-  height: 500px;
-  width: 500px;
-  overflow-y: hidden;
-  overflow-x: scroll;
-}
-
-.simplebar-hide-scrollbar {
-  position: fixed;
-  left: 0;
-  visibility: hidden;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 @font-face {
   font-family: "lg";

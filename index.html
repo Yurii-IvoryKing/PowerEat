@@ -6,11 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220205001746">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220208023437">
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap&_v=20220205001746" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap&_v=20220208023437" rel="stylesheet">
 
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -184,21 +184,21 @@
 					<div class="foodcalc__inner">
 						<div data-tabs class="foodcalc__tabs tabs-foodcalc">
 							<nav data-tabs-titles class="tabs-foodcalc__navigation">
-								<button type="submit" class="tabs-foodcalc__tab _tab-active" data-goal-subject='1'>
+								<button type="submit" class="tabs-foodcalc__tab _tab-active" data-goal-subject='1' data-filter-preset="map_600">
 									База<span>600 ККАЛ</span>
 								</button>
-								<button type="submit" class="tabs-foodcalc__tab" data-goal-subject='1'>
+								<button type="submit" class="tabs-foodcalc__tab" data-goal-subject='1' data-filter-preset="map_800">
 									Похудение<span>800 ККАЛ</span>
 								</button>
-								<button type="submit" class="tabs-foodcalc__tab" data-goal-subject='1'>
+								<button type="submit" class="tabs-foodcalc__tab" data-goal-subject='1' data-filter-preset="map_1100">
 									Похудение<span>1100 ККАЛ</span>
 								</button>
-								<button type="submit" class="tabs-foodcalc__tab _tab-disabled" data-goal-subject='2'>Поддержание<span>1500 ККАЛ</span>
+								<button type="submit" class="tabs-foodcalc__tab _tab-disabled" data-goal-subject='2' data-filter-preset="map_1500">Поддержание<span>1500 ККАЛ</span>
 								</button>
-								<button type="submit" class="tabs-foodcalc__tab _tab-disabled" data-goal-subject='3'>Набор<span>2000
+								<button type="submit" class="tabs-foodcalc__tab _tab-disabled" data-goal-subject='3' data-filter-preset="map_2000">Набор<span>2000
 										ККАЛ</span>
 								</button>
-								<button type="submit" class="tabs-foodcalc__tab _tab-disabled" data-goal-subject='3'>Набор<span>2500
+								<button type="submit" class="tabs-foodcalc__tab _tab-disabled" data-goal-subject='3' data-filter-preset="map_2500">Набор<span>2500
 										ККАЛ</span>
 								</button>
 							</nav>
@@ -299,64 +299,261 @@
 						</div>
 						<div class="foodcalc__content">
 							<div class="foodcalc__schedule schedule-foodcalc">
-								<div class="schedule-foodcalc__filter" data-da=".foodcalc__tabs, 992, 1">
-									<button data-short-name class="schedule-foodcalc__btn _filter-active">Понедельник</button>
-									<button data-short-name class="schedule-foodcalc__btn">Вторник</button>
-									<button data-short-name class="schedule-foodcalc__btn">Среда</button>
-									<button data-short-name class="schedule-foodcalc__btn">Четверг</button>
-									<button data-short-name class="schedule-foodcalc__btn">Пятница</button>
-									<button data-short-name class="schedule-foodcalc__btn">Суббота</button>
-									<button data-short-name class="schedule-foodcalc__btn">Воскресенье</button>
+
+								<div class="schedule-foodcalc__filter options-filter" data-da=".foodcalc__tabs, 999.98, 1">
+									<div class="options-filter__item">
+										<input hidden id="o_1" class="options-filter__input" checked type="radio" value="1" name="filterDay" data-filter-day="1">
+										<label for="o_1" class="options-filter__label"><span data-short-name class="options-filter__text">Понедельник</span></label>
+									</div>
+									<div class="options-filter__item">
+										<input hidden id="o_2" class="options-filter__input" type="radio" value="2" name="filterDay" data-filter-day="2">
+										<label for="o_2" class="options-filter__label"><span data-short-name class="options-filter__text">Вторник</span></label>
+									</div>
+									<div class="options-filter__item">
+										<input hidden id="o_3" class="options-filter__input" type="radio" value="2" name="filterDay" data-filter-day="3">
+										<label for="o_3" class="options-filter__label"><span data-short-name class="options-filter__text">Среда</span></label>
+									</div>
+									<div class="options-filter__item">
+										<input hidden id="o_4" class="options-filter__input" type="radio" value="2" name="filterDay" data-filter-day="4">
+										<label for="o_4" class="options-filter__label"><span data-short-name class="options-filter__text">Четверг</span></label>
+									</div>
+									<div class="options-filter__item">
+										<input hidden id="o_5" class="options-filter__input" type="radio" value="2" name="filterDay" data-filter-day="5">
+										<label for="o_5" class="options-filter__label"><span data-short-name class="options-filter__text">Пятница</span></label>
+									</div>
+									<div class="options-filter__item">
+										<input hidden id="o_6" class="options-filter__input" type="radio" value="2" name="filterDay" data-filter-day="6">
+										<label for="o_6" class="options-filter__label"><span data-short-name class="options-filter__text">Суббота</span></label>
+									</div>
+									<div class="options-filter__item">
+										<input hidden id="o_7" class="options-filter__input" type="radio" value="2" name="filterDay" data-filter-day="7">
+										<label for="o_7" class="options-filter__label"><span data-short-name class="options-filter__text">Воскресенье</span></label>
+									</div>
 								</div>
 								<div class="schedule-foodcalc__content">
 									<div class="schedule-foodcalc__items">
-										<a href="" class="schedule-foodcalc__item item-schedule" data-category-goal="" data-category-preset="" data-category-type="">
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="1" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
 											<span class="item-schedule__img">
-												<picture><source srcset="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.webp"type="image/webp"><img src="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.jpg" alt=""></picture>
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
 												<span class="item-schedule__type">
-													Завтрак
-												</span>
+													map_600 </span>
 											</span>
 											<p class="item-schedule__title">
-												Сырники с ягодами
-											</p>
+												Day: 1; Category: 1</p>
 										</a>
-										<a href="" class="schedule-foodcalc__item item-schedule" data-category-goal="" data-category-preset="" data-category-type="">
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="1" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
 											<span class="item-schedule__img">
-												<picture><source srcset="img/home/food.webp"type="image/webp"><img src="img/home/food.png" alt=""></picture>
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
 												<span class="item-schedule__type">
-													Завтрак
-												</span>
+													map_600 </span>
 											</span>
 											<p class="item-schedule__title">
-												Сырники с ягодами
-											</p>
+												Day: 1; Category: 1</p>
 										</a>
-										<a href="" class="schedule-foodcalc__item item-schedule" data-category-goal="" data-category-preset="" data-category-type="">
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="1" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
 											<span class="item-schedule__img">
-												<picture><source srcset="img/home/food.webp"type="image/webp"><img src="img/home/food.png" alt=""></picture>
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
 												<span class="item-schedule__type">
-													Завтрак
-												</span>
+													map_600 </span>
 											</span>
 											<p class="item-schedule__title">
-												Сырники с ягодами
-											</p>
+												Day: 1; Category: 1</p>
 										</a>
-										<a href="" class="schedule-foodcalc__item item-schedule" data-category-goal="" data-category-preset="" data-category-type="">
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="1" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
 											<span class="item-schedule__img">
-												<picture><source srcset="img/home/food.webp"type="image/webp"><img src="img/home/food.png" alt=""></picture>
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
 												<span class="item-schedule__type">
-													Завтрак
-												</span>
+													map_600 </span>
 											</span>
 											<p class="item-schedule__title">
-												Сырники с ягодами
-											</p>
+												Day: 1; Category: 1</p>
 										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="1" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 1; Category: 1</p>
+										</a>
+
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="2" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 1; Category: 2</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="2" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 1; Category: 2</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="2" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 1; Category: 2</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="2" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 1; Category: 2</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="2" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 1; Category: 2</p>
+										</a>
+
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="3" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 1; Category: 3</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="3" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 1; Category: 3</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="3" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 1; Category: 3</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="3" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 1; Category: 3</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="3" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 1; Category: 3</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="4" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 1; Category: 4</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="4" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 1; Category: 4</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="4" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 1; Category: 4</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="4" data-category-day="1" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 1; Category: 4</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="1" data-category-day="2" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 2; Category: 1</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="1" data-category-day="2" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 2; Category: 1</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="1" data-category-day="2" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 2; Category: 1</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="1" data-category-day="2" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 2; Category: 1</p>
+										</a>
+										<a href="" class="schedule-foodcalc__item item-schedule" data-category-preset="map_600" data-category-type="1" data-category-day="2" data-total-calories="300" data-total-proteins="50" data-total-fats="45" data-total-carbs="55">
+											<span class="item-schedule__img">
+												<picture><source srcset="img/items-temp.webp"type="image/webp"><img src="img/items-temp.png" alt=""></picture>
+												<span class="item-schedule__type">
+													map_600 </span>
+											</span>
+											<p class="item-schedule__title">
+												Day: 2; Category: 1</p>
+										</a>
+
 									</div>
 									<div class="schedule-foodcalc__goal goal-schedule">
-										<div class="goal-schedule__select category-select" data-da=".tabs-foodcalc__mobile, 992, 1">
+										<div class="goal-schedule__select category-select" data-da=".tabs-foodcalc__mobile, 999.98, 1">
 											<div class="goal-schedule__select-title category-select__title">
 												Выберите цель:
 											</div>
@@ -377,51 +574,63 @@
 												Энергетическая ценность:
 											</div>
 											<div class="info-schedule__subtitle">
-												<span>5</span> БЛЮД В ДЕНЬ — <span>608 ККАЛ</span> БЕЛКИ <span>35,4</span>, ЖИРЫ
-												<span>21,6</span>, УГЛЕВОДЫ <span>43,1</span>
+												<span data-calory-count>5 </span> В ДЕНЬ — <span data-calory-total>608
+													ККАЛ</span data-calory-proteins> БЕЛКИ <span>35,4</span>, ЖИРЫ
+												<span data-calory-fats>21,6</span>, УГЛЕВОДЫ <span data-calory-carbs>43,1</span>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="foodcalc__total total-foodcalc">
-								<div class="total-foodcalc__type category-select" data-da=".tabs-foodcalc__mobile, 992, 0">
+								<div class="total-foodcalc__type category-select" data-da=".tabs-foodcalc__mobile, 999.98, 0">
 									<div class="total-foodcalc__typet-title category-select__title">
 										Выберите меню:
 									</div>
 									<div class="total-foodcalc__type-items category-select__items">
-										<button class="total-foodcalc__type-btn category-select__item _filter-active">
-											Классическое
-										</button>
-										<button class="total-foodcalc__type-btn category-select__item">
-											Вегетарианское
-										</button>
-										<button class="total-foodcalc__type-btn category-select__item">
-											Рыбное
-										</button>
-										<button class="total-foodcalc__type-btn category-select__item">
-											Мясное
-										</button>
+										<div class="category-select__button">
+											<input hidden id="type_o-1" class="category-select__input" checked type="radio" value="1" name="filterType" data-filter-type="1">
+											<label for="type_o-1" class="category-select__item"><span class="category-select__text">Классическое</span></label>
+										</div>
+										<div class="category-select__button">
+											<input hidden id="type_o-2" class="category-select__input" type="radio" value="1" name="filterType" data-filter-type="2">
+											<label for="type_o-2" class="category-select__item"><span class="category-select__text">Вегетарианское</span></label>
+										</div>
+										<div class="category-select__button">
+											<input hidden id="type_o-3" class="category-select__input" type="radio" value="1" name="filterType" data-filter-type="3">
+											<label for="type_o-3" class="category-select__item"><span class="category-select__text">Рыбное</span></label>
+										</div>
+										<div class="category-select__button">
+											<input hidden id="type_o-4" class="category-select__input" type="radio" value="1" name="filterType" data-filter-type="4">
+											<label for="type_o-4" class="category-select__item"><span class="category-select__text">Мясное</span></label>
+										</div>
 									</div>
 								</div>
 								<form class="total-foodcalc__order">
 									<div class="total-foodcalc__order-title">
 										База 600 ККАЛ
 									</div>
+									<input hidden id="orderPreset-o_1" class="total-foodcalc__order-option" type="radio" value="600" name="orderPreset">
+									<input hidden id="orderPreset-o_2" class="total-foodcalc__order-option" type="radio" value="800" name="orderPreset">
+									<input hidden id="orderPreset-o_3" class="total-foodcalc__order-option" type="radio" value="1100" name="orderPreset">
+									<input hidden id="orderPreset-o_4" class="total-foodcalc__order-option" type="radio" value="1500" name="orderPreset">
+									<input hidden id="orderPreset-o_5" class="total-foodcalc__order-option" type="radio" value="2000" name="orderPreset">
+									<input hidden id="orderPreset-o_6" class="total-foodcalc__order-option" type="radio" value="2500" name="orderPreset">
 									<div class="total-foodcalc__select select-total">
-										<select name="form[days]" class="form" data-scroll='200'>
-											<option value="5" selected data-asset="<span>5 дней</span><span>1470 руб. /день</span>">
+										<select name="form[days]" class="form" data-scroll>
+											<option value="5" selected data-asset="<span>5 дней</span><span><span>1470</span>руб. /день</span>">
 											</option>
-											<option value="7" data-asset="<span>7 дней</span><span>1470 руб. /день</span>"></option>
-											<option value="10" data-asset="<span>10 дней</span><span>1470 руб. /день</span>">
+											<option value="7" data-asset="<span>7 дней</span><span><span >1470</span>руб. /день</span>">
 											</option>
-											<option value="14" data-asset="<span>14 дней</span><span>1470 руб. /день</span>">
+											<option value="10" data-asset="<span>10 дней</span><span><span>1470</span>руб. /день</span>">
 											</option>
-											<option value="20" data-asset="<span>20 дней</span><span>1470 руб. /день</span>">
+											<option value="14" data-asset="<span>14 дней</span><span><span >1470</span>руб. /день</span>">
 											</option>
-											<option value="21" data-asset="<span>21 день</span><span>1470 руб. /день</span>">
+											<option value="20" data-asset="<span>20 дней</span><span><span>1470</span>руб. /день</span>">
 											</option>
-											<option value="31" data-asset="<span>31 день</span><span>1470 руб. /день</span>">
+											<option value="21" data-asset="<span>21 день</span><span><span>1470</span>руб. /день</span>">
+											</option>
+											<option value="31" data-asset="<span>31 день</span><span><span>1470</span>руб. /день</span>">
 											</option>
 										</select>
 									</div>
@@ -521,39 +730,39 @@
 						</div>
 						<div class="testimonials__slider">
 							<div class="testimonials__swiper" data-gallery>
-								<div class="testimonials__slide" data-src="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.jpg">
+								<div class="testimonials__slide" data-src="img/slider-temp.jpg">
 									<div class="testimonials__slide-inner">
-										<picture><source srcset="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.webp"type="image/webp"><img src="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.jpg" alt=""></picture>
+										<picture><source srcset="img/slider-temp.webp"type="image/webp"><img src="img/slider-temp.jpg" alt=""></picture>
 									</div>
 								</div>
-								<div class="testimonials__slide" data-src="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.jpg">
+								<div class="testimonials__slide" data-src="img/slider-temp.jpg">
 									<div class="testimonials__slide-inner">
-										<picture><source srcset="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.webp"type="image/webp"><img src="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.jpg" alt=""></picture>
+										<picture><source srcset="img/slider-temp.webp"type="image/webp"><img src="img/slider-temp.jpg" alt=""></picture>
 									</div>
 								</div>
-								<div class="testimonials__slide" data-src="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.jpg">
+								<div class="testimonials__slide" data-src="img/slider-temp.jpg">
 									<div class="testimonials__slide-inner">
-										<picture><source srcset="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.webp"type="image/webp"><img src="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.jpg" alt=""></picture>
+										<picture><source srcset="img/slider-temp.webp"type="image/webp"><img src="img/slider-temp.jpg" alt=""></picture>
 									</div>
 								</div>
-								<div class="testimonials__slide" data-src="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.jpg">
+								<div class="testimonials__slide" data-src="img/slider-temp.jpg">
 									<div class="testimonials__slide-inner">
-										<picture><source srcset="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.webp"type="image/webp"><img src="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.jpg" alt=""></picture>
+										<picture><source srcset="img/slider-temp.webp"type="image/webp"><img src="img/slider-temp.jpg" alt=""></picture>
 									</div>
 								</div>
-								<div class="testimonials__slide" data-src="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.jpg">
+								<div class="testimonials__slide" data-src="img/slider-temp.jpg">
 									<div class="testimonials__slide-inner">
-										<picture><source srcset="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.webp"type="image/webp"><img src="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.jpg" alt=""></picture>
+										<picture><source srcset="img/slider-temp.webp"type="image/webp"><img src="img/slider-temp.jpg" alt=""></picture>
 									</div>
 								</div>
-								<div class="testimonials__slide" data-src="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.jpg">
+								<div class="testimonials__slide" data-src="img/slider-temp.jpg">
 									<div class="testimonials__slide-inner">
-										<picture><source srcset="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.webp"type="image/webp"><img src="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.jpg" alt=""></picture>
+										<picture><source srcset="img/slider-temp.webp"type="image/webp"><img src="img/slider-temp.jpg" alt=""></picture>
 									</div>
 								</div>
-								<div class="testimonials__slide" data-src="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.jpg">
+								<div class="testimonials__slide" data-src="img/slider-temp.jpg">
 									<div class="testimonials__slide-inner">
-										<picture><source srcset="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.webp"type="image/webp"><img src="https://pbs.twimg.com/media/EwS9tSfWYAElhnw.jpg" alt=""></picture>
+										<picture><source srcset="img/slider-temp.webp"type="image/webp"><img src="img/slider-temp.jpg" alt=""></picture>
 									</div>
 								</div>
 							</div>
@@ -851,9 +1060,9 @@
 			<img src="img/icons/close.svg" alt="">
 		</button>
 	</div>
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=ba3f8d72-ea7e-44d1-8567-7e2dedc20975&lang=ru_RU&_v=20220205001746" type="text/javascript">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ba3f8d72-ea7e-44d1-8567-7e2dedc20975&lang=ru_RU&_v=20220208023437" type="text/javascript">
 	</script>
-	<script src="js/app.min.js?_v=20220205001746"></script>
+	<script src="js/app.min.js?_v=20220208023437"></script>
 </body>
 
 </html>

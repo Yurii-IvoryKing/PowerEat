@@ -8853,9 +8853,6 @@ PERFORMANCE OF THIS SOFTWARE.
         }
     }
     if (document.querySelector("#map")) map();
-    document.addEventListener("DOMContentLoaded", (function(event) {
-        map();
-    }));
     const goalSelectRel = document.querySelectorAll("[data-goal-relative]");
     const goalSelect = document.querySelectorAll("[data-goal]");
     document.querySelector("[data-tabs-titles]");

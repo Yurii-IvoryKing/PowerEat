@@ -8852,7 +8852,9 @@ PERFORMANCE OF THIS SOFTWARE.
             myMap.behaviors.disable("scrollZoom");
         }
     }
-    if (document.querySelector("#map")) map();
+    window.onload = function() {
+        if (document.querySelector("#map")) map();
+    };
     const goalSelectRel = document.querySelectorAll("[data-goal-relative]");
     const goalSelect = document.querySelectorAll("[data-goal]");
     document.querySelector("[data-tabs-titles]");
